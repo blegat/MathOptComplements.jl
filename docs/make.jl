@@ -12,7 +12,7 @@ makedocs(
         mathengine = Documenter.KaTeX(),
     ),
     modules = [MathOptComplements],
-    repo = "https://github.com/blegat/MathOptComplements.jl/blob/{commit}{path}#{line}",
+    repo = "https://github.com/jump-dev/MathOptComplements.jl/blob/{commit}{path}#{line}",
     checkdocs = :none,
     clean = true,
     pages = [
@@ -29,7 +29,7 @@ makedocs(
 )
 
 deploydocs(
-    repo = "github.com/blegat/MathOptComplements.jl.git",
+    repo = "github.com/jump-dev/MathOptComplements.jl.git",
     target = "build",
     devbranch = "main",
     devurl = "dev",
