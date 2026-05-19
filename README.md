@@ -78,7 +78,7 @@ You can find [here](https://arxiv.org/html/2312.11022v2) a recent benchmark comp
 We acknowledge support from the [Fondation Mathématiques Jacques Hadamard](https://www.fondation-hadamard.fr/fr/)
 which has funded the PGMO-IROE project "A new optimization suite for large-scale market equilibrium".
 
-[build-img]: https://github.com/blegat/MathOptComplements.jl/actions/workflows/ci.yml/badge.svg?branch=main
-[build-url]: https://github.com/blegat/MathOptComplements.jl/actions?query=workflow%3ACI
-[codecov-img]: https://codecov.io/gh/blegat/MathOptComplements.jl/branch/main/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/blegat/MathOptComplements.jl/branch/main
+[build-img]: https://github.com/jump-dev/MathOptComplements.jl/actions/workflows/ci.yml/badge.svg?branch=main
+[build-url]: https://github.com/jump-dev/MathOptComplements.jl/actions?query=workflow%3ACI
+[codecov-img]: https://codecov.io/gh/jump-dev/MathOptComplements.jl/branch/main/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/jump-dev/MathOptComplements.jl/branch/main
