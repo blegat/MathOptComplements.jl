@@ -27,3 +27,11 @@ makedocs(
     ],
     plugins = [links],
 )
+
+deploydocs(
+    repo = "github.com/blegat/MathOptComplements.jl.git",
+    target = "build",
+    devbranch = "main",
+    devurl = "dev",
+    push_preview = true,
+)
