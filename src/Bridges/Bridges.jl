@@ -20,15 +20,15 @@ include("to_sos1_bridge.jl")
     add_all_bridges(model::MOI.ModelLike, ::Type{T} = Float64)
 
 Add all `MathOptComplements` bridges to `model`. The model is typically a
-[`MOI.Bridges.LazyBridgeOptimizer`](@ref) so that the bridge graph is
+[`MathOptInterface.Bridges.LazyBridgeOptimizer`](@extref) so that the bridge graph is
 extended with the bridges needed to reformulate
-[`MathOptComplements.ComplementsWithSetType`](@ref) and [`MOI.Complements`](@ref)
+[`MathOptComplements.ComplementsWithSetType`](@ref) and [`MathOptInterface.Complements`](@extref)
 constraints.
 
 When used with a `LazyBridgeOptimizer`, the [`NonlinearBridge`](@ref) uses
 the default [`ScholtesRelaxation`](@ref) because the
 [`MathOptComplements.DefaultComplementarityReformulation`](@ref) optimizer
-attribute is only supported by [`MathOptComplements.Optimizer`](@ref).
+attribute is only supported by `MathOptComplements.Optimizer`.
 """
 function add_all_bridges(model::MOI.ModelLike, ::Type{T} = Float64) where {T}
     MOI.Bridges.add_bridge(model, SpecifySetTypeBridge{T})

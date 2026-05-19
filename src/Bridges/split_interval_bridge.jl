@@ -18,18 +18,18 @@ must be a variable.
 
 `SplitIntervalBridge` supports:
 
-  * [`MOI.AbstractVectorFunction`](@ref) in
+  * [`MathOptInterface.AbstractVectorFunction`](@extref) in
     [`ComplementsWithSetType{MOI.Interval{T}}`](@ref)
 
 ## Target nodes
 
 `SplitIntervalBridge` creates:
 
-  * [`MOI.VectorOfVariables`](@ref) in
+  * [`MathOptInterface.VectorOfVariables`](@extref) in
     [`ComplementsWithSetType{MOI.GreaterThan{T}}`](@ref)
-  * [`MOI.VectorOfVariables`](@ref) in
+  * [`MathOptInterface.VectorOfVariables`](@extref) in
     [`ComplementsWithSetType{MOI.LessThan{T}}`](@ref)
-  * `G` in [`MOI.EqualTo{T}`](@ref) (the splitting equality)
+  * `G` in [`MathOptInterface.EqualTo`](@extref) (the splitting equality)
 
 where `G` is the scalar function type of the first component.
 

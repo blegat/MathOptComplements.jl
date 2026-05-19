@@ -3,7 +3,7 @@
 
 `SpecifySetTypeBridge` implements the following reformulation:
 
-  * `(x₁, x₂)` in [`MOI.Complements`](@ref) into `(x₁, x₂)` in
+  * `(x₁, x₂)` in [`MathOptInterface.Complements`](@extref) into `(x₁, x₂)` in
     [`ComplementsWithSetType{S}`](@ref)
 
 where `S` is determined by the bounds of `x₂`:
@@ -13,7 +13,7 @@ where `S` is determined by the bounds of `x₂`:
   * `x₂ ≤ 0` gives `S = MOI.Nonpositives`
   * `x₂ ≤ ub` (ub ≠ 0) gives `S = MOI.LessThan{T}`
   * `lb ≤ x₂ ≤ ub` gives `S = MOI.Interval{T}`
-  * `x₂` free gives `S = MOI.Zeros`
+  * `x₂` free gives `S = MOI.Real`
 
 The bridge also adds the appropriate bound on the activity variable `x₁`
 (for example, `x₁ ≥ 0` when `x₂` has a lower bound).
@@ -22,15 +22,15 @@ The bridge also adds the appropriate bound on the activity variable `x₁`
 
 `SpecifySetTypeBridge` supports:
 
-  * [`MOI.VectorOfVariables`](@ref) in [`MOI.Complements`](@ref)
+  * [`MathOptInterface.VectorOfVariables`](@extref) in [`MathOptInterface.Complements`](@extref)
 
 ## Target nodes
 
 `SpecifySetTypeBridge` creates:
 
-  * [`MOI.VectorOfVariables`](@ref) in [`ComplementsWithSetType{S}`](@ref)
-  * [`MOI.VariableIndex`](@ref) in [`MOI.GreaterThan{T}`](@ref) or
-    [`MOI.LessThan{T}`](@ref) (bounds on `x₁`)
+  * [`MathOptInterface.VectorOfVariables`](@extref) in [`ComplementsWithSetType{S}`](@ref)
+  * [`MathOptInterface.VariableIndex`](@extref) in [`MathOptInterface.GreaterThan`](@extref) or
+    [`MathOptInterface.LessThan`](@extref) (bounds on `x₁`)
 
 """
 mutable struct SpecifySetTypeBridge{T} <: MOI.Bridges.Constraint.AbstractBridge

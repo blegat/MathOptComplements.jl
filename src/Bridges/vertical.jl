@@ -15,15 +15,15 @@ to an equality constraint instead.
 
 `VerticalBridge` supports:
 
-  * [`MOI.AbstractVectorFunction`](@ref) in [`MOI.Complements`](@ref)
-  * [`MOI.AbstractVectorFunction`](@ref) in [`ComplementsWithSetType{S}`](@ref)
+  * [`MathOptInterface.AbstractVectorFunction`](@extref) in [`MathOptInterface.Complements`](@extref)
+  * [`MathOptInterface.AbstractVectorFunction`](@extref) in [`ComplementsWithSetType{S}`](@ref)
 
 ## Target nodes
 
 `VerticalBridge` creates:
 
-  * [`MOI.VectorOfVariables`](@ref) in `S`
-  * [`MOI.ScalarAffineFunction{T}`](@ref) in [`MOI.EqualTo{T}`](@ref)
+  * [`MathOptInterface.VectorOfVariables`](@extref) in `S`
+  * [`MathOptInterface.ScalarAffineFunction`](@extref) in [`MathOptInterface.EqualTo`](@extref)
 
 """
 struct VerticalBridge{T,S<:MOI.AbstractVectorSet} <: MOI.Bridges.Constraint.AbstractBridge

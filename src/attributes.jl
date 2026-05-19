@@ -30,7 +30,7 @@ Constraint attribute that overrides the [`AbstractComplementarityRelaxation`](@r
 for a specific complementarity constraint.
 
 When set, this takes precedence over the model-wide default set via
-[`DefaultComplementarityReformulation`](@ref). When not set, [`MOI.get`](@ref) returns the
+[`DefaultComplementarityReformulation`](@ref). When not set, [`MathOptInterface.get`](@extref) returns the
 model-wide default.
 
 ## Example

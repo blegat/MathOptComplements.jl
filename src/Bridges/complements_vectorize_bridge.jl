@@ -16,17 +16,17 @@ where `T` is the coefficient type.
 
 `ComplementsVectorizeBridge` supports:
 
-  * [`MOI.VectorOfVariables`](@ref) in [`ComplementsWithSetType{S}`](@ref)
-    where `S` is [`MOI.GreaterThan{T}`](@ref), [`MOI.LessThan{T}`](@ref), or
-    [`MOI.EqualTo{T}`](@ref)
+  * [`MathOptInterface.VectorOfVariables`](@extref) in [`ComplementsWithSetType{S}`](@ref)
+    where `S` is [`MathOptInterface.GreaterThan`](@extref), [`MathOptInterface.LessThan`](@extref), or
+    [`MathOptInterface.EqualTo`](@extref)
 
 ## Target nodes
 
 `ComplementsVectorizeBridge` creates:
 
   * `F` in [`ComplementsWithSetType{SV}`](@ref), where `SV` is
-    [`MOI.Nonnegatives`](@ref), [`MOI.Nonpositives`](@ref), or
-    [`MOI.Zeros`](@ref) depending on the input set type
+    [`MathOptInterface.Nonnegatives`](@extref), [`MathOptInterface.Nonpositives`](@extref), or
+    [`MathOptInterface.Zeros`](@extref) depending on the input set type
 
 """
 struct ComplementsVectorizeBridge{T,F,S,SV} <: MOI.Bridges.Constraint.AbstractBridge

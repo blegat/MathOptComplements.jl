@@ -19,7 +19,7 @@ The relaxation method is determined by the
 
 `NonlinearBridge` supports:
 
-  * [`MOI.VectorOfVariables`](@ref) in [`ComplementsWithSetType{S}`](@ref)
+  * [`MathOptInterface.VectorOfVariables`](@extref) in [`ComplementsWithSetType{S}`](@ref)
 
 ## Target nodes
 

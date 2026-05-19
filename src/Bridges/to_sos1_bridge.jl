@@ -13,14 +13,14 @@ one of them is nonzero, which is equivalent to the complementarity condition.
 
 `ToSOS1Bridge` supports:
 
-  * [`MOI.VectorOfVariables`](@ref) in
+  * [`MathOptInterface.VectorOfVariables`](@extref) in
     [`ComplementsWithSetType{MOI.Nonnegatives}`](@ref)
 
 ## Target nodes
 
 `ToSOS1Bridge` creates:
 
-  * [`MOI.VectorOfVariables`](@ref) in [`MOI.SOS1{T}`](@ref)
+  * [`MathOptInterface.VectorOfVariables`](@extref) in [`MathOptInterface.SOS1`](@extref)
 
 """
 struct ToSOS1Bridge{T} <: MOI.Bridges.Constraint.AbstractBridge
